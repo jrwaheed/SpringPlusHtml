@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="https://www.thymeleaf.org ">
+<!--<html lang="en">-->
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Getting Started: Handling Form Submission</title>
+    </head>
+
+    <body>
+        <h1>VIP Customer Form</h1>
+        <form action="#" th:object="${customer}" method="post">
+            <p>First Name: <input type="text" th:field="*{firstName}"/></p>
+            <p>Last Name: <input type="text" th:field="*{lastName}"/></p>
+            <p>Balance: <input type="number" th:field="*{balance}"/></p>
+            <p><input type="submit" value="Submit"/>
+                <input type="reset" value="Reset"/>
+            </p>
+        </form>
+    </body>
+</html>

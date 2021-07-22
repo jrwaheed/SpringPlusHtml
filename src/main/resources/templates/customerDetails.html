@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xnlns:th="https//www.thymeleaf.org" xmlns:th="http://www.w3.org/1999/xhtml"
+      xmlns:xnlns="http://www.w3.org/1999/xhtml" xmlns:xnlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+
+<body>
+<h1>Customer Details</h1>
+<p>Id: <span th:text="${customer.id}"></span> </p>
+<p>First Name: <span th:text="${customer.firstName}"></span> </p>
+<p>Last Name: <span th:text="${customer.LastName}"></span> </p>
+<a href="/customer/list">Show all customers </a>
+
+</body>
+</html>

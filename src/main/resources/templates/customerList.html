@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th> First Name </th>
+        <th> Last Name </th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr th:if="${customerList.empty}">
+        <td colspan="3"> No customers Available </td>
+    </tr>
+    <tr th:each="customer : ${customerList}">
+        <td><span th:text="${customer.firstName}"> abs </span></td>
+        <td><span th:text="${customer.lastName}"> dsf </span></td>
+        <td>
+            <a th:href="@{'/customer/view/' + ${customer.id}}"> View </a>
+            <a th:href="@{'/customer/edit/' + ${customer.id}}"> Edit </a>
+            <a th:href="@{'/customer/delete/' + ${customer.id}}"> Delete </a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<p><a href="/customer/new">Add new customer</a></p>
+
+</body>
+</html>
