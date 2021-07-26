@@ -27,7 +27,7 @@ public class MainController {
     public String processCreationForm (@ModelAttribute Customer customer, Model model) {
         iCustomerRepository.save(customer);
         model.addAttribute("customer", customer);
-        return "redirect: customerlist";
+        return "redirect:/customer/list";
     }
 
 
